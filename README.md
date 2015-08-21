@@ -2,15 +2,30 @@
 
 ## Description
 
-This is an avr-gcc library for the HD44780 character LCD display.
-
-After buying the SC1602BS LCD module, I couldn't find an avr-gcc library that drives the display correctly. Arduino's LiquidCrystal library was the only library that worked so this is a simple avr-gcc version of that library.
-
-Tested with the Teensy++ 2.0 development board.
+This is an avr-gcc library for the HD44780 character LCD display. Forked 
+from (aostanin/avr-hd44780)[https://github.com/aostanin/avr-hd44780] 
+and modified to suit my requirements.
 
 ## Usage
 
-See `lcd.h` for the usable methods. You need to edit it with the pins you're using.
+1. Modify `pins.h` to set the I/O up the way you like it. 
+
+The control signals must all be on one port.
+The data signals must all be on consecutive pins and all on one port.
+
+Different ports may be used for the control and data pins.
+
+The LCD is operated in 4 bit mode to conserve I/O pins. A total of 7 
+pins are required.
+
+2. Edit `lcd.h` to change the number of row and column counts for your
+particular LCD.
+
+
+3. See `lcd.c` for the callable methods
+
+4. Include all 3 files in your project.
+
 
 ## License
 
@@ -26,3 +41,4 @@ http://www.gnu.org/licenses/gpl-2.0.html
 
 - [SC1602BS Character Display Module](http://akizukidenshi.com/catalog/g/gP-00040/)
 - [Arduino's LiquidCrystal library source](https://code.google.com/p/arduino/source/browse/trunk/libraries/LiquidCrystal)
+- [https://github.com/aostanin/avr-hd44780]
