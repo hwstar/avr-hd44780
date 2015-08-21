@@ -3,12 +3,12 @@
 ## Description
 
 This is an avr-gcc library for the HD44780 character LCD display. Forked 
-from (aostanin/avr-hd44780)[https://github.com/aostanin/avr-hd44780] 
+from [aostanin/avr-hd44780](https://github.com/aostanin/avr-hd44780) 
 and modified to suit my requirements.
 
 ## Usage
 
-1. Modify `pins.h` to set the I/O up the way you like it. 
+* Modify `pins.h` to set the I/O up the way you like it. 
 
 The control signals must all be on one port.
 The data signals must all be on consecutive pins and all on one port.
@@ -18,13 +18,13 @@ Different ports may be used for the control and data pins.
 The LCD is operated in 4 bit mode to conserve I/O pins. A total of 7 
 pins are required.
 
-2. Edit `lcd.h` to change the number of row and column counts for your
+* Edit `lcd.h` to change the number of row and column counts for your
 particular LCD.
 
 
-3. See `lcd.c` for the callable methods
+* See `lcd.c` for the callable methods
 
-4. Include all 3 files in your project.
+* Include all 3 files in your project.
 
 
 ## License
